@@ -1,5 +1,5 @@
 __kupfer_name__ = _("More Image Tools")
-__kupfer_actions__ = ("MirrorImage", "VerticallyMirrorImage")
+__kupfer_actions__ = ("HorizontalFlip", "VerticalFlip")
 __description__ = _("More image transformation tools")
 __version__ = "2011-11-25"
 __author__ = "Karl Svartholm <karl@passionismandatory.com>"
@@ -44,17 +44,17 @@ class MirrorBase (Action):
 	def get_description(self):
 		return None
 
-class MirrorImage (MirrorBase):
+class HorizontalFlip (MirrorBase):
 	def __init__(self):
-		MirrorBase.__init__(self, _("Mirror Image"), "horizontal")
+		MirrorBase.__init__(self, _("Horizontal Flip"), "horizontal")
 
 	def get_icon_name(self):
 		# TODO Replace with better icon
 		return "gnome-graphics"
 
-class VerticallyMirrorImage (MirrorBase):
+class VerticalFlip (MirrorBase):
 	def __init__(self):
-		MirrorBase.__init__(self, _("Vertically Mirror Image"), "vertical")
+		MirrorBase.__init__(self, _("Vertical Flip"), "vertical")
 
 	def get_icon_name(self):
 		# TODO Replace with better icon
